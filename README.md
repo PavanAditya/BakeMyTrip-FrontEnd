@@ -1,4 +1,4 @@
-# Bake My Trip - FrontEnd
+# Pack Ur Bags - FrontEnd
 
 > The frontend React app created for cloning MakeMyTrip application ✈✈
 
