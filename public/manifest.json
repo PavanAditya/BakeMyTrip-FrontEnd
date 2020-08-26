@@ -1,25 +1,45 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+    "short_name": "React App",
+    "name": "Create React App Sample",
+    "icons": [
+        {
+            "src": "assets/logos/pack-ur-bags-logo.png",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "assets/logos/pack-ur-bags.png",
+            "type": "image/png",
+            "sizes": "791x316"
+        },
+        {
+            "src": "assets/logos/pack-ur-bags-bg.png",
+            "type": "image/png",
+            "sizes": "791x316"
+        },
+        {
+            "src": "assets/logos/pack-ur-bags-ticket.png",
+            "type": "image/png",
+            "sizes": "710x341"
+        },
+        {
+            "src": "assets/images/plane-fly.gif",
+            "type": "image/png",
+            "sizes": "800x600"
+        },
+        {
+            "src": "assets/images/plane-load-round.gif",
+            "type": "image/png",
+            "sizes": "800x600"
+        },
+        {
+            "src": "assets/images/plane-load.gif",
+            "type": "image/png",
+            "sizes": "800x600"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
 }

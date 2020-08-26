@@ -1,0 +1,35 @@
+.root-class {
+    flex-grow: 1;
+}
+
+.unscrolled {
+    box-shadow: none !important;
+}
+
+.scrolled {
+    box-shadow: initial;
+}
+
+.app-bar {
+    background: transparent !important;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.header-logo {
+    flex-grow: 1;
+}
+
+.header-logo img {
+    height: 6vmin;
+}
+
+@media (max-width: 767px) {
+    .app-bar {
+        padding: 0;
+        align-items: center;
+    }
+    .header-logo img {
+        height: 13vmin;
+    }
+}

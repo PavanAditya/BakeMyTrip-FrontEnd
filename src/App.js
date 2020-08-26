@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Header from './components/core/Header';
+import Loader from './components/shared/Loader';
 import './App.css';
 
 function App() {
+
+  const [app, setApp] = useState('loading');
+  const [stage, setStage] = useState('unscrolled');
+  const [authorized, setAuthorized] = useState(false);
+
+  setTimeout(() => {
+    setApp('loaded');
+  }, 7000);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {app === 'loading'
+        ? <Loader />
+        :
+        <div>
+          <Header stage={stage} authorized={authorized} />
+          <div className="router">hi</div>
+        </div>
+      }
     </div>
   );
 }

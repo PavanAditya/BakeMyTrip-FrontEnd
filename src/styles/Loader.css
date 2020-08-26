@@ -1,0 +1,35 @@
+.Load {
+    background-color: #f3f2f3;
+}
+
+.App-Load-Screen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-logo {
+    height: 10vmin;
+    pointer-events: none;
+    margin-left: -85%;
+    margin-top: -12%;
+}
+
+@media (max-width: 800px) {
+    .Load {
+        overflow: hidden;
+    }
+    .App-Loader {
+        margin-left: 50px;
+    }
+    .App-logo {
+        height: 15vmin;
+        margin-left: -55%;
+        margin-top: -30%;
+    }
+}
