@@ -31,8 +31,10 @@
 .auth-button {
     font-family: "Lato", sans-serif !important;
     width: 225px;
+    height: 35px;
     text-transform: initial !important;
     background-image: linear-gradient(45deg, #53b2fe, #065af3);
+    font-weight: 700 !important;
     font-size: 10px !important;
     color: white !important;
     padding: 5px 10px !important;
@@ -45,7 +47,7 @@
 }
 
 .info-button {
-    height: 40px;
+    height: 35px;
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.15) !important;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2) !important;
