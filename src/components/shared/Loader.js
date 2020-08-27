@@ -7,7 +7,7 @@ import '../../styles/Loader.css'
 export default function Loader() {
     return (
         <div className="Load">
-            <Header stage={'unscrolled'} authorized={'load'} />
+            <Header stage={'unscrolled'} appState={'loading'} />
             <div className="App-Load-Screen">
                 {/* <img src={logo} className="App-logo" alt="packurbags-logo" /> */}
                 <img src={planeLoad} className="App-Loader" alt="plane-fly" />

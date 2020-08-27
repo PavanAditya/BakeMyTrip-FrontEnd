@@ -1,26 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/core/Header';
 import Loader from './components/shared/Loader';
 import './App.css';
 
 function App() {
 
-  const [app, setApp] = useState('loading');
+  const [appState, setAppState] = useState('loading');
   const [stage, setStage] = useState('unscrolled');
-  const [authorized, setAuthorized] = useState(false);
+
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setStage(position < 475 ? 'unscrolled' : 'scrolled');
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   setTimeout(() => {
-    setApp('loaded');
-  }, 7000);
+    setAppState('loaded');
+  }, 3000);
 
   return (
     <div className="App">
-      {app === 'loading'
+      {appState === 'loading'
         ? <Loader />
         :
         <div>
-          <Header stage={stage} authorized={authorized} />
-          <div className="router">hi</div>
+          <Header stage={stage} appState={appState} />
+          <div className="router">
+            <div className="top-div"></div>
+            <div></div>
+          </div>
         </div>
       }
     </div>

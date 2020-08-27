@@ -1,0 +1,44 @@
+.MuiDialog-paper {
+    font-family: "Lato", sans-serif !important;
+    margin-top: -5% !important;
+    border-radius: 10px !important;
+    width: 500px !important;
+}
+
+/* ? Scroll Bar Styles */
+
+.MuiDialogContent-root::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 20px;
+    opacity: 0;
+}
+
+.MuiDialogContent-root::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+    opacity: 0;
+}
+
+.MuiDialogContent-root::-webkit-scrollbar-thumb {
+    background-color: #07000052;
+    width: 5px;
+    border-radius: 20px;
+}
+
+/* ? Scroll Bar Styles */
+
+@media (max-width: 585px) {
+    .MuiDialog-paper {
+        min-width: 90% !important;
+        max-height: 75% !important;
+        margin: 35px !important;
+    }
+}
+
+@media (min-width: 586px) and (max-width: 960px) {
+    .MuiDialog-paper {
+        min-width: 90% !important;
+        max-height: 75% !important;
+        margin: 35px !important;
+    }
+}

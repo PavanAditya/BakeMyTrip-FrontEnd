@@ -3,11 +3,23 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+// import { MuiThemeProvider, createMuiTheme, Typography } from '@material-ui/core';
+
+// const muiTheme = createMuiTheme({
+//   typography: {
+//     useNextVariants: true,
+//     fontFamily: "'Lato', sans-serif"
+//   }
+// });
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+  // </React.StrictMode>,
+  // <MuiThemeProvider muiTheme={muiTheme}>
+  //   <Typography>
+  //   </Typography>
+  // </MuiThemeProvider>,
+  <App />,
   document.getElementById('root')
 );
 
