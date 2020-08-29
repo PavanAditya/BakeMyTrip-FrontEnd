@@ -1,0 +1,55 @@
+.home-page {
+    height: 1500px;
+}
+
+.top-div {
+    height: 475px;
+    background-image: linear-gradient(0deg, #144174, #042c5a, #06121f);
+}
+
+.mobile-options-area {
+    display: none;
+}
+
+.booking-area {
+    border-radius: 8px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 50px 20px 0;
+    margin: 6.5% 18% 0%;
+    position: absolute;
+    width: 62%;
+    height: 225px;
+}
+
+.options-area {
+    border-radius: 8px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 50px 20px 0;
+    margin: -6.5% 9% 0%;
+    position: absolute;
+    width: 75%;
+    height: 35px;
+}
+
+@media (max-width: 767px) {
+    .top-div {
+        height: 600px;
+    }
+    .booking-area {
+        margin: 40% 15% 0%;
+    }
+    .options-area {
+        display: none;
+    }
+    .mobile-options-area {
+        display: block;
+        position: absolute;
+        margin-top: 15%;
+        height: 75px;
+        width: 100%;
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+    }
+}

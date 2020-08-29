@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { Route } from 'react-router-dom';
 import Header from './components/core/Header';
 import Loader from './components/shared/Loader';
+import FlightsPage from './components/flights/FlightsPage';
+import HomePage from './components/flights/HomePage';
 import './App.css';
 
 function App() {
@@ -31,10 +34,9 @@ function App() {
         :
         <div>
           <Header stage={stage} appState={appState} />
-          <div className="router">
-            <div className="top-div"></div>
-            <div></div>
-          </div>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/home" exact component={HomePage} />
+          <Route path="/flights" exact component={FlightsPage} />
         </div>
       }
     </div>

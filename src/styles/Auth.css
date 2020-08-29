@@ -1,0 +1,78 @@
+.modal-title {
+    margin: 25px 15px;
+}
+
+.toggle-btn {
+    padding: 7px;
+    -webkit-border-radius: 51px;
+    -moz-border-radius: 51px;
+    border-radius: 51px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.3);
+}
+
+.toggle-item {
+    background-color: transparent;
+    padding: 7px 14px;
+    border-radius: 150px;
+    color: grey;
+    font-weight: 700;
+    font-size: 15px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle-active {
+    background-image: linear-gradient(45deg, #53b2fe, #065af3);
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* ? Edit Register Form Styles */
+
+.edit-register-form {
+    align-items: center;
+}
+
+.MuiOutlinedInput-input {
+    padding: 14px !important;
+}
+
+.form-btn {
+    width: 95%;
+    margin: 15px 5px !important;
+    padding: 8px !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+}
+
+/* ? Edit Register Form Styles */
+
+.input-field {
+    width: 95%;
+    font-size: 8px !important;
+    margin: 5px !important;
+}
+
+.Mui-focused fieldset {
+    border-color: #53b2fe !important;
+}
+
+/* ? Modal Styles */
+
+.auth-modal-head {
+    font-family: "Lato", sans-serif !important;
+    font-size: 26px;
+    color: gray;
+}
+/* ? Modal Styles */
+
+@media (max-width: 767px) {
+    .auth-modal-head {
+        font-size: 20px;
+    }
+}

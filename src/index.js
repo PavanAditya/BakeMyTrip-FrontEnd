@@ -3,23 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-// import { MuiThemeProvider, createMuiTheme, Typography } from '@material-ui/core';
-
-// const muiTheme = createMuiTheme({
-//   typography: {
-//     useNextVariants: true,
-//     fontFamily: "'Lato', sans-serif"
-//   }
-// });
+import { BrowserRouter as Router } from 'react-router-dom';
 
 ReactDOM.render(
   // <React.StrictMode>
   // </React.StrictMode>,
-  // <MuiThemeProvider muiTheme={muiTheme}>
-  //   <Typography>
-  //   </Typography>
-  // </MuiThemeProvider>,
-  <App />,
+  <Router>
+    <App />
+  </Router>,
   document.getElementById('root')
 );
 

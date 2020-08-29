@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../core/Header';
-import logo from '../../assets/logos/pack-ur-bags.png';
+// import logo from '../../assets/logos/pack-ur-bags.png';
 import planeLoad from '../../assets/images/plane-fly.gif';
 import '../../styles/Loader.css'
 

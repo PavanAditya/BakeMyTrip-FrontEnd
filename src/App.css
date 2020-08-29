@@ -12,16 +12,6 @@
   width: 75%;
 }
 
-.router {
-  height: 1500px;
-}
-
-.top-div {
-  height: 475px;
-  background-image: linear-gradient(0deg, #144174, #042c5a, #06121f)
-  /* background-color: #0c2949; */
-}
-
 @keyframes App-logo-spin {
   0% {
     transform: rotate(0deg);
