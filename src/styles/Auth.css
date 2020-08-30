@@ -25,11 +25,18 @@
 }
 
 .toggle-active {
-    background-image: linear-gradient(45deg, #53b2fe, #065af3);
     color: white;
     font-weight: 700;
     font-size: 15px;
     cursor: pointer;
+}
+
+.toggle-active.login {
+    background-image: linear-gradient(45deg, #53b2fe, #065af3);
+}
+
+.toggle-active.register {
+    background-image: linear-gradient(92deg, #f0772c, #f95776);
 }
 
 /* ? Edit Register Form Styles */
@@ -43,11 +50,23 @@
 }
 
 .form-btn {
-    width: 95%;
+    font-family: "Lato", sans-serif !important;
+    text-transform: initial !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    color: white !important;
+    width: 95% !important;
     margin: 15px 5px !important;
     padding: 8px !important;
     font-weight: 700 !important;
-    font-size: 16px !important;
+}
+
+.form-btn.login {
+    background-image: linear-gradient(45deg, #53b2fe, #065af3);
+}
+
+.form-btn.register {
+    background-image: linear-gradient(92deg, #f0772c, #f95776);
 }
 
 /* ? Edit Register Form Styles */

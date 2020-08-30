@@ -30,7 +30,6 @@
 
 .auth-button {
     font-family: "Lato", sans-serif !important;
-    width: 225px;
     height: 35px;
     text-transform: initial !important;
     background-image: linear-gradient(45deg, #53b2fe, #065af3);
@@ -64,6 +63,7 @@
 
 .info-btn-1 {
     width: 175px;
+    font-size: 10px !important;
 }
 
 .info-btn-2 {
@@ -100,7 +100,7 @@
 }
 
 .material-icon {
-    font-size: 30px !important;
+    font-size: 25px !important;
     margin-left: 25px;
 }
 

@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { AppBar, Icon, Typography, Toolbar, Button, Grid } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 import ResponsiveDialog from '../shared/ResponsiveDialog';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Auth from './Auth';
+import { partners } from '../../assets/json/partners.json';
+import { coupons } from '../../assets/json/coupons.json';
 import '../../styles/Header.css'
-import { Link } from 'react-router-dom';
 
 export default function Header({ stage, appState }) {
 
@@ -14,23 +16,8 @@ export default function Header({ stage, appState }) {
     const [infoDialogId, setInfoDialogId] = useState(0);
     const [copy, setCopy] = useState(-1);
 
-    const partnersList = [
-        { partnerLogo: 'indigo-logo.png', partnerTail: 'indigo-tail.png', partnerName: 'Indigo' },
-        { partnerLogo: 'air-asia-logo.png', partnerTail: 'air-asia-tail.png', partnerName: 'Air Asia' },
-        { partnerLogo: 'air-india-logo.png', partnerTail: 'air-india-tail.png', partnerName: 'Air India' },
-        { partnerLogo: 'spice-jet-logo.jpg', partnerTail: 'spice-jet-tail.png', partnerName: 'Spice Jet' },
-        { partnerLogo: 'vistara-logo.png', partnerTail: 'vistara-tail.png', partnerName: 'Vistara' }
-    ];
-
-    const couponCodes = [
-        { couponCode: 'PUBDOUBLECASHBACK', couponDesc: 'One lucky winner gets the Double Amount of his booking everyday.' },
-        { couponCode: 'PUBPAYTM', couponDesc: 'Pay using paytm and get an instant Pack Ur Bags discount upto 500' },
-        { couponCode: 'PUBELITECUSTOMER', couponDesc: 'Pack Ur Bags Privilaged customers are provided a cashback of upto Rs. 1500/-' },
-        { couponCode: 'PUBFRISTBOOKING', couponDesc: 'Get upto 750 off on first Pack Ur Bags booking.' },
-        { couponCode: 'PUBLUCKY100', couponDesc: '100 Lucky Winners will get complete cashback.' },
-        { couponCode: 'PUBHDFC', couponDesc: '25% discounted bookings with Pack Ur Bags' },
-        { couponCode: 'PUBINSURANCE', couponDesc: 'Get your flight ticket insurance done by Pack Ur Bags.' }
-    ];
+    const partnersList = partners;
+    const couponCodes = coupons;
 
     const openAuthDialog = () => {
         setOpen(true);
@@ -208,7 +195,7 @@ export default function Header({ stage, appState }) {
                         <Button
                             variant="contained"
                             className="info-button info-btn-1"
-                            startIcon={<img className="info-btn-logo" src={require('../../assets/images/info-btn-1-bg.png')} alt='info-icon-1' />}
+                            startIcon={<img className="info-btn-logo" src={require('../../assets/icons/info-btn-1-bg.png')} alt='info-icon-1' />}
                             onClick={() => { setCopy(-1); openInfoDialog(1); }}
                         >
                             <div>
@@ -219,7 +206,7 @@ export default function Header({ stage, appState }) {
                         <Button
                             variant="contained"
                             className="info-button info-btn-2"
-                            startIcon={<img className="info-btn-logo" src={require('../../assets/images/info-btn-2-bg.png')} alt='info-icon-2' />}
+                            startIcon={<img className="info-btn-logo" src={require('../../assets/icons/info-btn-2-bg.png')} alt='info-icon-2' />}
                             onClick={() => openInfoDialog(2)}
                         >
                             <div>
@@ -229,7 +216,7 @@ export default function Header({ stage, appState }) {
                         <Button
                             variant="contained"
                             className="info-button info-btn-3"
-                            startIcon={<img className="info-btn-logo" src={require('../../assets/images/info-btn-3-bg.png')} alt='info-icon-3' />}
+                            startIcon={<img className="info-btn-logo" src={require('../../assets/icons/info-btn-3-bg.png')} alt='info-icon-3' />}
                             onClick={() => openInfoDialog(3)}
                         >
                             <div>
@@ -240,7 +227,7 @@ export default function Header({ stage, appState }) {
                         <Button
                             variant="contained"
                             className="info-button info-btn-4"
-                            startIcon={<img className="info-btn-logo info-btn-logo-4" src={require('../../assets/images/info-btn-4-bg.png')} alt='info-icon-3' />}
+                            startIcon={<img className="info-btn-logo info-btn-logo-4" src={require('../../assets/icons/info-btn-4-bg.png')} alt='info-icon-3' />}
                             onClick={() => openInfoDialog(4)}
                         >
                             <div></div>
