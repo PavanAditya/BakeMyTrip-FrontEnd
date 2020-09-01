@@ -52,7 +52,7 @@
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2) !important;
     margin-left: 5px !important;
     padding: 5px !important;
-    font-size: 11px !important;
+    font-size: 10px !important;
     color: white !important;
 }
 
@@ -181,5 +181,23 @@
     }
     .auth-modal-head {
         font-size: 20px;
+    }
+}
+
+@media (min-width: 1525px) and (max-width: 1625px) {
+    .info-button {
+        font-size: 9px !important;
+    }
+    .auth-button {
+        font-size: 9px !important;
+    }
+}
+
+@media (min-width: 1225px) and (max-width: 1524px) {
+    .info-button {
+        font-size: 7px !important;
+    }
+    .auth-button {
+        font-size: 8px !important;
     }
 }
