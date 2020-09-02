@@ -10,6 +10,14 @@
     margin-top: -5px;
 }
 
+.web-app-bar {
+    display: flex !important;
+}
+
+.mobile-app-bar {
+    display: none !important;
+}
+
 .unscrolled {
     box-shadow: none !important;
 }
@@ -48,7 +56,7 @@
 .info-button {
     height: 35px;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.15) !important;
+    background-color: rgb(43 57 72) !important;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2) !important;
     margin-left: 5px !important;
     padding: 5px !important;
@@ -172,12 +180,91 @@
 }
 
 @media (max-width: 767px) {
+    .web-app-bar {
+        display: none !important;
+    }
+    .mobile-app-bar {
+        display: flex !important;
+        background: white;
+        height: 65px !important;
+    }
     .app-bar {
         padding: 0;
-        align-items: center;
+    }
+    .auth-button {
+        min-width: 125px !important;
+    }
+    .mobile-info-button {
+        margin: 1% !important;
+        padding: 1% !important;
+        background: white !important;
+    }
+    .info-btn-logo-6 {
+        height: 25px !important;
+        margin-left: 10px;
+    }
+    .all-country-flags {
+        height: 185px;
+    }
+    .root-class {
+        position: fixed;
+        z-index: 1;
+    }
+    .scrolled {
+        animation: none;
+        box-shadow: none !important;
+    }
+    .unscrolled {
+        box-shadow: none !important;
     }
     .header-logo img {
         height: 13vmin;
+    }
+    .auth-modal-head {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+    .web-app-bar {
+        display: none !important;
+    }
+    .mobile-app-bar {
+        display: flex !important;
+        background: white;
+        height: 65px !important;
+    }
+    .app-bar {
+        padding: 0;
+    }
+    .auth-button {
+        min-width: 125px !important;
+    }
+    .mobile-info-button {
+        margin: 1% !important;
+        padding: 1% !important;
+        background: white !important;
+    }
+    .info-btn-logo-6 {
+        height: 25px !important;
+        margin-left: 10px;
+    }
+    .all-country-flags {
+        height: 185px;
+    }
+    .root-class {
+        position: fixed;
+        z-index: 1;
+    }
+    .scrolled {
+        animation: none;
+        box-shadow: none !important;
+    }
+    .unscrolled {
+        box-shadow: none !important;
+    }
+    .header-logo img {
+        height: 7vmin;
     }
     .auth-modal-head {
         font-size: 20px;
@@ -193,9 +280,18 @@
     }
 }
 
-@media (min-width: 1225px) and (max-width: 1524px) {
+@media (min-width: 1301px) and (max-width: 1524px) {
     .info-button {
         font-size: 7px !important;
+    }
+    .auth-button {
+        font-size: 8px !important;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1300px) {
+    .info-button {
+        display: none !important;
     }
     .auth-button {
         font-size: 8px !important;

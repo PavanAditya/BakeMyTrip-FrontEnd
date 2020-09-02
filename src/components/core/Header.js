@@ -186,94 +186,179 @@ export default function Header({ stage, appState }) {
         <div className="root-class">
             <AppBar className={stage === 'unscrolled' ? 'app-bar unscrolled' : 'app-bar scrolled'}>
                 {appState === 'loaded'
-                    ? <Toolbar>
-                        <Typography className="header-logo">
-                            <Link to="home">
-                                <img src={stage === 'scrolled' ? require('../../assets/logos/pack-ur-bags-bg.png') : require('../../assets/logos/pack-ur-bags-contrast.png')} alt="Pack Ur Bags Logo" />
-                            </Link>
-                        </Typography>
-                        <Button
-                            variant="contained"
-                            className="info-button info-btn-1"
-                            startIcon={<img className="info-btn-logo" src={require('../../assets/icons/info-btn-1-bg.png')} alt='info-icon-1' />}
-                            onClick={() => { setCopy(-1); openInfoDialog(1); }}
-                        >
-                            <div>
-                                PUB<b>DOUBLECASHBACK</b> <br />
-                                <div style={{ fontSize: '7px', color: "gray" }}>Free Cancellation Assured</div>
-                            </div>
-                        </Button>
-                        <Button
-                            variant="contained"
-                            className="info-button info-btn-2"
-                            startIcon={<img className="info-btn-logo" src={require('../../assets/icons/info-btn-2-bg.png')} alt='info-icon-2' />}
-                            onClick={() => openInfoDialog(2)}
-                        >
-                            <div>
-                                <b>My Trips</b>
-                            </div>
-                        </Button>
-                        <Button
-                            variant="contained"
-                            className="info-button info-btn-3"
-                            startIcon={<img className="info-btn-logo" src={require('../../assets/icons/info-btn-3-bg.png')} alt='info-icon-3' />}
-                            onClick={() => openInfoDialog(3)}
-                        >
-                            <div>
-                                <b>24 x 7</b> <br />
-                                <div style={{ fontSize: '8px', color: "gray" }}> Support </div>
-                            </div>
-                        </Button>
-                        <Button
-                            variant="contained"
-                            className="info-button info-btn-4"
-                            startIcon={<img className="info-btn-logo info-btn-logo-4" src={require('../../assets/icons/info-btn-4-bg.png')} alt='info-icon-3' />}
-                            onClick={() => openInfoDialog(4)}
-                        >
-                            <div></div>
-                        </Button>
-                        <Button
-                            variant="contained"
-                            className="info-button info-btn-5"
-                            startIcon={<img className="info-btn-logo" src={require('../../assets/logos/pack-ur-bags-logo.png')} alt='info-icon-4' />}
-                            onClick={() => openInfoDialog(5)}
-                        >
-                            <div>
-                                <b>Partners and Collaborators</b>  <br />
-                                <div style={{ fontSize: '8px', color: "gray" }}> Join hands with Pack Ur Bags</div>
-                            </div>
-                        </Button>
-                        {
-                            authorized === 'load'
-                                ? <div></div>
-                                : authorized === true
-                                    ? <div className="authorized"></div>
-                                    : <div className="unauthorized">
-                                        <Button
-                                            variant="contained"
-                                            className="auth-button"
-                                            startIcon={<img className="auth-btn-logo" src={require('../../assets/logos/pack-ur-bags-logo-bw.png')} alt='info-icon-5' />}
-                                            endIcon={<Icon className="material-icon">expand_more</Icon>}
-                                            onClick={() => openAuthDialog()}
-                                        >
-                                            Login or Create Account
+                    ? <span>
+                        <Toolbar className="web-app-bar">
+                            <Typography className="header-logo">
+                                <Link to="home">
+                                    <img src={stage === 'scrolled' ? require('../../assets/logos/pack-ur-bags-bg.png') : require('../../assets/logos/pack-ur-bags-contrast.png')} alt="Pack Ur Bags Logo" />
+                                </Link>
+                            </Typography>
+                            <Button
+                                variant="contained"
+                                className="info-button info-btn-1"
+                                startIcon={<img className="info-btn-logo" src={require('../../assets/icons/info-btn-1-bg.png')} alt='info-icon-1' />}
+                                onClick={() => { setCopy(-1); openInfoDialog(1); }}
+                            >
+                                <div>
+                                    PUB<b>DOUBLECASHBACK</b> <br />
+                                    <div style={{ fontSize: '7px', color: "gray" }}>Free Cancellation Assured</div>
+                                </div>
+                            </Button>
+                            <Button
+                                variant="contained"
+                                className="info-button info-btn-2"
+                                startIcon={<img className="info-btn-logo" src={require('../../assets/icons/info-btn-2-bg.png')} alt='info-icon-2' />}
+                                onClick={() => openInfoDialog(2)}
+                            >
+                                <div>
+                                    <b>My Trips</b>
+                                </div>
+                            </Button>
+                            <Button
+                                variant="contained"
+                                className="info-button info-btn-3"
+                                startIcon={<img className="info-btn-logo" src={require('../../assets/icons/info-btn-3-bg.png')} alt='info-icon-3' />}
+                                onClick={() => openInfoDialog(3)}
+                            >
+                                <div>
+                                    <b>24 x 7</b> <br />
+                                    <div style={{ fontSize: '8px', color: "gray" }}> Support </div>
+                                </div>
+                            </Button>
+                            <Button
+                                variant="contained"
+                                className="info-button info-btn-4"
+                                startIcon={<img className="info-btn-logo info-btn-logo-4" src={require('../../assets/icons/info-btn-4-bg.png')} alt='info-icon-3' />}
+                                onClick={() => openInfoDialog(4)}
+                            >
+                                <div></div>
+                            </Button>
+                            <Button
+                                variant="contained"
+                                className="info-button info-btn-5"
+                                startIcon={<img className="info-btn-logo" src={require('../../assets/logos/pack-ur-bags-logo.png')} alt='info-icon-4' />}
+                                onClick={() => openInfoDialog(5)}
+                            >
+                                <div>
+                                    <b>Partners and Collaborators</b>  <br />
+                                    <div style={{ fontSize: '8px', color: "gray" }}> Join hands with Pack Ur Bags</div>
+                                </div>
+                            </Button>
+                            {
+                                authorized === 'load'
+                                    ? <div></div>
+                                    : authorized === true
+                                        ? <div className="authorized"></div>
+                                        : <div className="unauthorized">
+                                            <Button
+                                                variant="contained"
+                                                className="auth-button"
+                                                startIcon={<img className="auth-btn-logo" src={require('../../assets/logos/pack-ur-bags-logo-bw.png')} alt='info-icon-5' />}
+                                                endIcon={<Icon className="material-icon">expand_more</Icon>}
+                                                onClick={() => openAuthDialog()}
+                                            >
+                                                Login or Create Account
                                     </Button>
-                                    </div>
-                        }
-                        <Button
-                            variant="contained"
-                            className="info-button info-btn-6"
-                            startIcon={<img className="info-btn-logo-6" src={require('../../assets/images/india-flag.jpg')} alt='info-icon-6' />}
-                            endIcon={<Icon className="material-icon-6">expand_more</Icon>}
-                            onClick={() => openInfoDialog(6)}
-                        >
-                            <div>
-                                <b>India</b>
-                            </div>
-                        </Button>
+                                        </div>
+                            }
+                            <Button
+                                variant="contained"
+                                className="info-button info-btn-6"
+                                startIcon={<img className="info-btn-logo-6" src={require('../../assets/images/india-flag.jpg')} alt='info-icon-6' />}
+                                endIcon={<Icon className="material-icon-6">expand_more</Icon>}
+                                onClick={() => openInfoDialog(6)}
+                            >
+                                <div>
+                                    <b>India</b>
+                                </div>
+                            </Button>
+                        </Toolbar>
+                        <Toolbar className="mobile-app-bar">
+                            <Typography className="header-logo">
+                                <Link to="home">
+                                    <img src={require('../../assets/logos/pack-ur-bags-bg.png')} alt="Pack Ur Bags Logo" />
+                                </Link>
+                            </Typography>
+                            <Button
+                                variant="contained"
+                                className="mobile-info-button"
+                                // startIcon={<img className="info-btn-logo" src={require('../../assets/icons/info-btn-1-bg.png')} alt='info-icon-1' />}
+                                onClick={() => { setCopy(-1); openInfoDialog(1); }}
+                            >
+                                <div>
+                                    <div style={{ fontSize: '9px', fontWeight: "bold" }}>Promo Codes</div>
+                                </div>
+                            </Button>
+                            {/* <Button
+                                variant="contained"
+                                className="mobile-info-button"
+                                // startIcon={<img className="info-btn-logo" src={require('../../assets/icons/info-btn-2-bg.png')} alt='info-icon-2' />}
+                                onClick={() => openInfoDialog(2)}
+                            >
+                                <div>
+                                    <b style={{ fontSize: '11px', fontWeight: "bold" }}>My Trips</b>
+                                </div>
+                            </Button> */}
+                            {/* <Button
+                                variant="contained"
+                                className="mobile-info-button"
+                                // startIcon={<img className="info-btn-logo" src={require('../../assets/icons/info-btn-3-bg.png')} alt='info-icon-3' />}
+                                onClick={() => openInfoDialog(3)}
+                            >
+                                <div>
+                                    <div style={{ fontSize: '11px', fontWeight: "bold" }}> 24 x 7 Support </div>
+                                </div>
+                            </Button> */}
+                            {/* <Button
+                                variant="contained"
+                                className="mobile-info-button"
+                                startIcon={<img className="info-btn-logo info-btn-logo-4" src={require('../../assets/icons/info-btn-4-bg.png')} alt='info-icon-3' />}
+                                onClick={() => openInfoDialog(4)}
+                            >
+                                <div></div>
+                            </Button> */}
+                            {/* <Button
+                                variant="contained"
+                                className="mobile-info-button"
+                                // startIcon={<img className="info-btn-logo" src={require('../../assets/logos/pack-ur-bags-logo.png')} alt='info-icon-4' />}
+                                onClick={() => openInfoDialog(5)}
+                            >
+                                <div>
+                                    <div style={{ fontSize: '11px', fontWeight: "bold" }}>Partners and Collaborators</div>
+                                </div>
+                            </Button> */}
+                            {
+                                authorized === 'load'
+                                    ? <div></div>
+                                    : authorized === true
+                                        ? <div className="authorized"></div>
+                                        : <div className="unauthorized">
+                                            <Button
+                                                variant="contained"
+                                                className="auth-button"
+                                                startIcon={<img className="auth-btn-logo" src={require('../../assets/logos/pack-ur-bags-logo-bw.png')} alt='info-icon-5' />}
+                                                // endIcon={<Icon className="material-icon">expand_more</Icon>}
+                                                onClick={() => openAuthDialog()}
+                                            >
+                                                Login or Create Account
+                                    </Button>
+                                        </div>
+                            }
+                            {/* <Button
+                                variant="contained"
+                                className="mobile-info-button"
+                                startIcon={<img className="info-btn-logo-6" src={require('../../assets/images/india-flag.jpg')} alt='info-icon-6' />}
+                                // endIcon={<Icon className="material-icon-6">expand_more</Icon>}
+                                onClick={() => openInfoDialog(6)}
+                            >
+                                <div>
+                                    <b>IND</b>
+                                </div>
+                            </Button> */}
+                        </Toolbar>
                         <ResponsiveDialog Header={() => { return (<div></div>); }} Body={InfoBody} Footer={() => { return (<div></div>); }} open={infoDialogOpen} setOpen={setInfoDialogOpen} />
-                        <ResponsiveDialog Header={Header} Body={Body} Footer={Footer} open={open} setOpen={setOpen} />
-                    </Toolbar>
+                        <ResponsiveDialog Header={Header} Body={Body} Footer={Footer} open={open} setOpen={setOpen} setAuthorized={setAuthorized} />
+                    </span>
                     : <Toolbar>
                         <Typography className="header-logo">
                             <Link to="home">

@@ -53,6 +53,11 @@
     font-size: 15px;
 }
 
+.mobile {
+    width: 20%;
+    margin-top: 0 !important;
+}
+
 .option-8 {
     font-size: 13px;
 }
@@ -75,6 +80,10 @@
     border-radius: 0;
 }
 
+.option-active {
+    color: #008cff;
+}
+
 .config-row {
     font-family: "Lato", sans-serif !important;
     color: #4a4a4a !important;
@@ -84,8 +93,17 @@
     font-size: 14px;
 }
 
+.more-logo {
+    height: 150px;
+}
+
 .flights-block {
     font-family: "Lato", sans-serif !important;
+    display: block;
+}
+
+.mobile-flights-block {
+    display: none;
 }
 
 .main-block-option {
@@ -155,7 +173,7 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 1px 30px 0 rgba(0, 0, 0, 0.1);
-    z-index: 1;
+    /* z-index: 1; */
     cursor: pointer;
     position: absolute;
     color: #008cff;
@@ -178,6 +196,61 @@
 .select-5 {
     width: 22%;
     border-radius: 0 8px 8px 0;
+}
+
+.mobile-flights-block > .select-input-row > .select-1 {
+    width: 48%;
+    margin: 1%;
+    border-radius: 8px;
+}
+
+.mobile-flights-block > .select-input-row > .from-to {
+    margin-top: 35px;
+    margin-left: 45%;
+}
+
+.mobile-flights-block > .select-input-row > .select-2 {
+    width: 48%;
+    margin: 1%;
+    border-radius: 8px;
+}
+
+.mobile-flights-block > .select-input-row > .select-3 {
+    width: 31%;
+    margin: 1%;
+    border-radius: 8px;
+}
+
+.mobile-flights-block > .select-input-row > .select-4 {
+    width: 31%;
+    margin: 1%;
+    border-radius: 8px;
+}
+
+.mobile-flights-block > .select-input-row > .select-5 {
+    width: 31%;
+    margin: 1%;
+    border-radius: 8px;
+}
+
+.mobile-flights-block > .select-input-row > .MuiAutocomplete-inputRoot {
+    padding: 25px 9px 0 9px !important;
+    height: 25px;
+    width: 98% !important;
+}
+
+.mobile-flights-block > .MuiInputAdornment-root > .MuiButtonBase-root.MuiIconButton-root {
+    padding: 40px 50px 35px 50px !important;
+}
+
+.mobile-flights-block > .config-row {
+    margin: 15px 0px 10px 0px;
+    justify-content: center;
+}
+
+.mobile-radio-btn {
+    justify-content: center;
+    display: flex;
 }
 
 .from-loc {
@@ -244,6 +317,7 @@
 }
 
 .popover-span {
+    display: block;
     margin: 25px 0;
 }
 
@@ -295,11 +369,11 @@
 
 /* ? Autocomplete Input Field Styles Override */
 
-.MuiOutlinedInput-notchedOutline {
+.MuiAutocomplete-inputRoot > .MuiOutlinedInput-notchedOutline {
     border: transparent !important;
 }
 
-.MuiOutlinedInput-notchedOutline:focus {
+.MuiAutocomplete-inputRoot > .MuiOutlinedInput-notchedOutline:focus {
     border: transparent !important;
 }
 
@@ -328,6 +402,11 @@
     margin-left: 155px !important;
     margin-top: -50px !important;
 }
+.mobile-menu > .MuiPopover-paper {
+    margin: 10% 0 0 0% !important;
+    min-width: initial !important;
+    max-width: initial !important;
+}
 
 .MuiInputAdornment-root > .MuiButtonBase-root.MuiIconButton-root {
     padding: 40px 70px 35px 60px !important;
@@ -352,7 +431,7 @@
 
 /* ? Popover internal styles Override */
 
-.MuiPopover-paper {
+.select-travellers > .MuiPopover-paper {
     margin: 0% !important;
     min-width: 450px !important;
     min-height: 250px !important;
@@ -416,7 +495,16 @@
         height: 600px;
     }
     .booking-area {
-        margin: 40% 15% 0%;
+        margin: 40% 0% 0%;
+        padding: 0;
+        width: 100%;
+        height: 50%;
+    }
+    .flights-block {
+        display: none;
+    }
+    .mobile-flights-block {
+        display: block;
     }
     .options-area {
         display: none;
@@ -424,10 +512,206 @@
     .mobile-options-area {
         display: block;
         position: absolute;
-        margin-top: 15%;
+        margin-top: 59px;
         height: 75px;
-        width: 100%;
+        width: 100% !important;
         box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
         background-color: #fff;
+        position: fixed;
+        z-index: 1;
+        box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+            0px 10px 10px 0px rgba(0, 0, 0, 0.12);
+    }
+    .cancel-icon {
+        display: none;
+    }
+    .date-title {
+        font-size: 9px;
+        margin-bottom: 0px;
+    }
+    .mobile-date {
+        font-size: 12px;
+    }
+    .travel-type-title {
+        font-size: 7px;
+        margin-left: 5px;
+    }
+    .MuiInputAdornment-root > .MuiButtonBase-root.MuiIconButton-root {
+        padding: 40px 50px 35px 50px !important;
+        margin-top: -120px !important;
+        margin-left: -8px !important;
+        opacity: 0 !important;
+    }
+    .select-travellers > .MuiPopover-paper {
+        margin: 0% 0 0 -5% !important;
+        min-width: 325px !important;
+        max-width: 325px !important;
+        min-height: 250px !important;
+        padding: 1% 2%;
+    }
+    .adult-num {
+        font-size: 25px;
+    }
+    .adult {
+        font-size: 15px;
+    }
+    .MuiPopover-paper {
+        margin-left: 50px !important;
+        margin-top: -25px !important;
+    }
+    .airport-dets {
+        font-size: 11px !important;
+        margin-top: -5px !important;
+    }
+    .MuiAutocomplete-inputRoot .MuiAutocomplete-input {
+        padding: 25px 0 25px 8px !important;
+        font-size: 20px;
+    }
+    .search-btn {
+        margin-top: 35px !important;
+        margin-left: 23% !important;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 999px) {
+    .top-div {
+        height: 700px;
+    }
+    .booking-area {
+        margin: 20% 0% 0%;
+        padding: 0;
+        width: 100%;
+        height: 50%;
+    }
+    .flights-block {
+        display: none;
+    }
+    .mobile-flights-block {
+        display: block;
+    }
+    .options-area {
+        display: none;
+    }
+    .mobile-options-area {
+        display: block;
+        position: absolute;
+        margin-top: 59px;
+        height: 75px;
+        width: 100% !important;
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        position: fixed;
+        z-index: 1;
+        box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+            0px 10px 10px 0px rgba(0, 0, 0, 0.12);
+    }
+    .cancel-icon {
+        display: none;
+    }
+    .date-title {
+        font-size: 9px;
+        margin-bottom: 0px;
+    }
+    .mobile-date {
+        font-size: 12px;
+    }
+    .travel-type-title {
+        font-size: 7px;
+        margin-left: 5px;
+    }
+    .select-travellers > .MuiPopover-paper {
+        margin: 0% 0 0 -5% !important;
+        min-width: 325px !important;
+        max-width: 325px !important;
+        min-height: 250px !important;
+        padding: 1% 2%;
+    }
+    .MuiPopover-paper {
+        margin-left: 50px !important;
+        margin-top: -25px !important;
+    }
+    .MuiInputAdornment-root > .MuiButtonBase-root.MuiIconButton-root {
+        padding: 40px 50px 35px 50px !important;
+        margin-top: -120px !important;
+        margin-left: -8px !important;
+        opacity: 0 !important;
+    }
+    .airport-dets {
+        font-size: 11px !important;
+        margin-top: -5px !important;
+    }
+    .MuiAutocomplete-inputRoot .MuiAutocomplete-input {
+        padding: 25px 0 25px 8px !important;
+        font-size: 20px;
+    }
+    .search-btn {
+        margin-top: 35px !important;
+        margin-left: 23% !important;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1400px) {
+    .options-area {
+        padding: 30px 5px 0 !important;
+        margin: -9.5% 9% 0% !important;
+    }
+    .option {
+        padding-bottom: 0px !important;
+        font-size: 11px;
+    }
+    .option-8 {
+        font-size: 9px;
+    }
+    .trending-search {
+        display: none;
+    }
+    .MuiInputAdornment-root > .MuiButtonBase-root.MuiIconButton-root {
+        padding: 40px 30px 35px 26px !important;
+        margin-top: -215px !important;
+        margin-left: -8px !important;
+        opacity: 0 !important;
+    }
+    .MuiAutocomplete-inputRoot .MuiAutocomplete-input {
+        font-size: 15px;
+    }
+    .from-to {
+        width: 30px;
+        height: 30px;
+        margin-left: 22.5%;
+    }
+    .date-title {
+        font-size: 9px;
+    }
+    .day {
+        font-size: 18px;
+    }
+    .month {
+        font-size: 16px;
+    }
+    .year {
+        font-size: 16px;
+    }
+    .cancel-icon {
+        display: none;
+    }
+}
+
+@media (min-width: 1401px) and (max-width: 1650px) {
+    .options-area {
+        padding: 42px 5px 0;
+    }
+    .option {
+        padding-bottom: 0px;
+        font-size: 13px;
+    }
+}
+
+@media (max-height: 568px) {
+    .booking-area {
+        margin-top: 50%;
+        height: 60%;
+    }
+    .search-btn {
+        margin-left: 17% !important;
     }
 }
