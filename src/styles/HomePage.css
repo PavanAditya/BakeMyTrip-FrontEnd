@@ -427,6 +427,22 @@
     border: none !important;
 }
 
+#mobile-fromDate.MuiInputBase-input {
+    color: transparent !important;
+}
+
+#fromDate.MuiInputBase-input {
+    color: transparent !important;
+}
+
+#mobile-toDate.MuiInputBase-input {
+    color: transparent !important;
+}
+
+#toDate.MuiInputBase-input {
+    color: transparent !important;
+}
+
 /* ? Datepicker internal styles Override */
 
 /* ? Popover internal styles Override */

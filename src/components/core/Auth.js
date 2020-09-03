@@ -39,6 +39,10 @@ export default function Auth() {
 
     }
 
+    const googleAuth = () => {
+
+    }
+
     return (
         <div className="edit-register-form">
             <div className="toggle-btn">
@@ -75,6 +79,18 @@ export default function Auth() {
                         Create Account
                     </Button>
                 </form>}
+            <span className="google-auth-block">
+                <p className="google-auth-title">Or Login/Signup with</p>
+                <Button
+                    variant="contained"
+                    className="google-auth-button"
+                    onClick={() => googleAuth()}
+                >
+                    <img className="google-auth-icon" src={require("../../assets/icons/google-icon.png")} alt="google-auth-icon"></img>
+                    Login with Google
+                </Button>
+                <p className="google-auth-title tc">By proceeding, you agree to <b>PackUrBags</b>'s Privacy Policy, User Agreement and T&Cs</p>
+            </span>
         </div>
     )
 }

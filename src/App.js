@@ -5,6 +5,7 @@ import Loader from './components/shared/Loader';
 import FlightsPage from './components/flights/FlightsPage';
 import HomePage from './components/flights/HomePage';
 import './App.css';
+import PrivacyNote from './components/shared/PrivacyNote';
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
           <Route path="/" exact component={HomePage} />
           <Route path="/home" exact component={HomePage} />
           <Route path="/flights" exact component={FlightsPage} />
+          <Route path="/privacynote" exact component={PrivacyNote} />
         </div>
       }
     </div>
