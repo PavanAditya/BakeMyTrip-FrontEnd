@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Button, TextField, Grid } from '@material-ui/core';
+import { googleAuth } from '../../services/AuthService';
 import '../../styles/Auth.css';
 
 export default function Auth() {
@@ -39,8 +40,8 @@ export default function Auth() {
 
     }
 
-    const googleAuth = () => {
-
+    const googleLogin = () => {
+        googleAuth();
     }
 
     return (
@@ -84,7 +85,7 @@ export default function Auth() {
                 <Button
                     variant="contained"
                     className="google-auth-button"
-                    onClick={() => googleAuth()}
+                    onClick={() => googleLogin()}
                 >
                     <img className="google-auth-icon" src={require("../../assets/icons/google-icon.png")} alt="google-auth-icon"></img>
                     Login with Google

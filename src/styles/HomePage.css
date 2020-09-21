@@ -113,7 +113,7 @@
     font-size: 20px;
 }
 
-.main-block-option > b {
+.main-block-option>b {
     justify-content: center;
     display: grid;
 }
@@ -123,7 +123,7 @@
     padding: 3px !important;
 }
 
-.radio-btn.active > .MuiRadio-root {
+.radio-btn.active>.MuiRadio-root {
     color: black !important;
 }
 
@@ -134,7 +134,7 @@
     color: #9b9b9b !important;
 }
 
-.radio-btn.active > .MuiTypography-body1 {
+.radio-btn.active>.MuiTypography-body1 {
     color: black !important;
 }
 
@@ -198,52 +198,52 @@
     border-radius: 0 8px 8px 0;
 }
 
-.mobile-flights-block > .select-input-row > .select-1 {
+.mobile-flights-block>.select-input-row>.select-1 {
     width: 48%;
     margin: 1%;
     border-radius: 8px;
 }
 
-.mobile-flights-block > .select-input-row > .from-to {
+.mobile-flights-block>.select-input-row>.from-to {
     margin-top: 35px;
     margin-left: 45%;
 }
 
-.mobile-flights-block > .select-input-row > .select-2 {
+.mobile-flights-block>.select-input-row>.select-2 {
     width: 48%;
     margin: 1%;
     border-radius: 8px;
 }
 
-.mobile-flights-block > .select-input-row > .select-3 {
+.mobile-flights-block>.select-input-row>.select-3 {
     width: 31%;
     margin: 1%;
     border-radius: 8px;
 }
 
-.mobile-flights-block > .select-input-row > .select-4 {
+.mobile-flights-block>.select-input-row>.select-4 {
     width: 31%;
     margin: 1%;
     border-radius: 8px;
 }
 
-.mobile-flights-block > .select-input-row > .select-5 {
+.mobile-flights-block>.select-input-row>.select-5 {
     width: 31%;
     margin: 1%;
     border-radius: 8px;
 }
 
-.mobile-flights-block > .select-input-row > .MuiAutocomplete-inputRoot {
+.mobile-flights-block>.select-input-row>.MuiAutocomplete-inputRoot {
     padding: 25px 9px 0 9px !important;
     height: 25px;
     width: 98% !important;
 }
 
-.mobile-flights-block > .MuiInputAdornment-root > .MuiButtonBase-root.MuiIconButton-root {
+.mobile-flights-block>.MuiInputAdornment-root>.MuiButtonBase-root.MuiIconButton-root {
     padding: 40px 50px 35px 50px !important;
 }
 
-.mobile-flights-block > .config-row {
+.mobile-flights-block>.config-row {
     margin: 15px 0px 10px 0px;
     justify-content: center;
 }
@@ -367,13 +367,14 @@
     position: absolute !important;
 }
 
+
 /* ? Autocomplete Input Field Styles Override */
 
-.MuiAutocomplete-inputRoot > .MuiOutlinedInput-notchedOutline {
+.MuiAutocomplete-inputRoot>.MuiOutlinedInput-notchedOutline {
     border: transparent !important;
 }
 
-.MuiAutocomplete-inputRoot > .MuiOutlinedInput-notchedOutline:focus {
+.MuiAutocomplete-inputRoot>.MuiOutlinedInput-notchedOutline:focus {
     border: transparent !important;
 }
 
@@ -394,7 +395,9 @@
     cursor: pointer;
 }
 
+
 /* ? Autocomplete Input Field Styles Override */
+
 
 /* ? Datepicker internal styles Override */
 
@@ -402,20 +405,21 @@
     margin-left: 155px !important;
     margin-top: -50px !important;
 }
-.mobile-menu > .MuiPopover-paper {
+
+.mobile-menu>.MuiPopover-paper {
     margin: 10% 0 0 0% !important;
     min-width: initial !important;
     max-width: initial !important;
 }
 
-.MuiInputAdornment-root > .MuiButtonBase-root.MuiIconButton-root {
+.MuiInputAdornment-root>.MuiButtonBase-root.MuiIconButton-root {
     padding: 40px 70px 35px 60px !important;
     margin-top: -155px !important;
     margin-left: -8px !important;
     opacity: 0 !important;
 }
 
-.empty-date > .MuiInputBase-root > .MuiInputAdornment-root > .MuiButtonBase-root.MuiIconButton-root {
+.empty-date>.MuiInputBase-root>.MuiInputAdornment-root>.MuiButtonBase-root.MuiIconButton-root {
     margin-top: -30px !important;
 }
 
@@ -443,16 +447,19 @@
     color: transparent !important;
 }
 
+
 /* ? Datepicker internal styles Override */
+
 
 /* ? Popover internal styles Override */
 
-.select-travellers > .MuiPopover-paper {
+.select-travellers>.MuiPopover-paper {
     margin: 0% !important;
     min-width: 450px !important;
     min-height: 250px !important;
     padding: 1% 2%;
 }
+
 
 /* ? Popover internal styles Override */
 
@@ -535,8 +542,7 @@
         background-color: #fff;
         position: fixed;
         z-index: 1;
-        box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
-            0px 10px 10px 0px rgba(0, 0, 0, 0.12);
+        box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 10px 10px 0px rgba(0, 0, 0, 0.12);
     }
     .cancel-icon {
         display: none;
@@ -552,13 +558,13 @@
         font-size: 7px;
         margin-left: 5px;
     }
-    .MuiInputAdornment-root > .MuiButtonBase-root.MuiIconButton-root {
+    .MuiInputAdornment-root>.MuiButtonBase-root.MuiIconButton-root {
         padding: 40px 50px 35px 50px !important;
         margin-top: -120px !important;
         margin-left: -8px !important;
         opacity: 0 !important;
     }
-    .select-travellers > .MuiPopover-paper {
+    .select-travellers>.MuiPopover-paper {
         margin: 0% 0 0 -5% !important;
         min-width: 325px !important;
         max-width: 325px !important;
@@ -618,8 +624,7 @@
         background-color: #fff;
         position: fixed;
         z-index: 1;
-        box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
-            0px 10px 10px 0px rgba(0, 0, 0, 0.12);
+        box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 10px 10px 0px rgba(0, 0, 0, 0.12);
     }
     .cancel-icon {
         display: none;
@@ -635,7 +640,7 @@
         font-size: 7px;
         margin-left: 5px;
     }
-    .select-travellers > .MuiPopover-paper {
+    .select-travellers>.MuiPopover-paper {
         margin: 0% 0 0 -5% !important;
         min-width: 325px !important;
         max-width: 325px !important;
@@ -646,7 +651,7 @@
         margin-left: 50px !important;
         margin-top: -25px !important;
     }
-    .MuiInputAdornment-root > .MuiButtonBase-root.MuiIconButton-root {
+    .MuiInputAdornment-root>.MuiButtonBase-root.MuiIconButton-root {
         padding: 40px 50px 35px 50px !important;
         margin-top: -120px !important;
         margin-left: -8px !important;
@@ -681,7 +686,7 @@
     .trending-search {
         display: none;
     }
-    .MuiInputAdornment-root > .MuiButtonBase-root.MuiIconButton-root {
+    .MuiInputAdornment-root>.MuiButtonBase-root.MuiIconButton-root {
         padding: 40px 30px 35px 26px !important;
         margin-top: -215px !important;
         margin-left: -8px !important;
@@ -719,6 +724,26 @@
     .option {
         padding-bottom: 0px;
         font-size: 13px;
+    }
+}
+
+@media (min-width: 1301px) and (max-width: 1650px) {
+    .booking-area {
+        margin: 6.5% 15% 0%;
+        width: 75%;
+    }
+    .options-area {
+        margin-top: -7.5% !important;
+    }
+    .search-btn {
+        margin-left: 38% !important;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1300px) {
+    .search-btn {
+        margin-top: 35px !important;
+        margin-left: 33% !important;
     }
 }
 

@@ -41,7 +41,7 @@ export default function HomePage() {
 
     const changeFlightDets = (key, value) => {
         console.log(key, value);
-        const newFlight = { ...flight };
+        const newFlight = {...flight };
         newFlight[key] = value;
         if (key === 'fromDate') {
             newFlight['toDate'] = null;
@@ -84,7 +84,7 @@ export default function HomePage() {
             case 'eco':
                 return 'ECONOMY/PREMIUM ECONOMY'
             case 'pre-eco':
-                return 'PREMIUM ECONOMY'
+                return 'PREMIUM'
             case 'bus':
                 return 'BUSINESS'
             default:
@@ -103,9 +103,9 @@ export default function HomePage() {
     }
 
     const searchFlight = () => {
-        if (flight.fromLocInput === '' || flight.toLocInput === '') {
-            setSnackBarType('error');
-            setSnackBarMsg(`Please Select valid ${flight.fromLocInput === '' ? `"From"` : ''} ${flight.fromLocInput === '' && flight.toLocInput === '' ? 'and' : ''} ${flight.toLocInput === '' ? `"To"` : ''} location.`);
+            if (flight.fromLocInput === '' || flight.toLocInput === '') {
+                setSnackBarType('error');
+                setSnackBarMsg(`Please Select valid ${flight.fromLocInput === '' ? `"From"` : ''} ${flight.fromLocInput === '' && flight.toLocInput === '' ? 'and' : ''} ${flight.toLocInput === '' ? `"To"` : ''} location.`);
             setSnackBarTransition(() => snackBarLeft);
             setSnackBarOpen(true);
         } else if (flight.fromLocInput === flight.toLocInput) {
@@ -125,6 +125,36 @@ export default function HomePage() {
 
     const snackBarClose = () => {
         setSnackBarOpen(false);
+    }
+
+    const getTravellersButtons = () => {
+        return (
+            [1, 2, 3, 4, 5, 6, 7, 8, 9].map((ele, i) => {
+                return (
+                    <Button
+                        key={ele}
+                        variant="contained"
+                        className={flight.travellers === (ele) ? "fare-btn class-btn active" : "fare-btn class-btn"}
+                        onClick={() => changeFlightDets('travellers', (ele))}
+                    >{ele}</Button>
+                );
+            })
+        );
+    }
+
+    const getChildrenButtons = () => {
+        return (
+            [0, 1, 2, 3, 4, 5, 6].map((ele, i) => {
+                return (
+                    <Button
+                        key={ele}
+                        variant="contained"
+                        className={flight.children === (ele) ? "fare-btn class-btn active" : "fare-btn class-btn"}
+                        onClick={() => changeFlightDets('children', (ele))}
+                    >{ele}</Button>
+                );
+            })
+        );
     }
 
     const flightsBlock = () => {
@@ -261,7 +291,7 @@ export default function HomePage() {
                                     ADULTS (12y+)
                                 {/* <span className="slider-val">{flight.travellers}</span> */}
                                 </Typography>
-                                <Slider
+                                {/* <Slider
                                     defaultValue={flight.travellers}
                                     value={flight.travellers}
                                     onChange={(e, value) => changeFlightDets('travellers', value)}
@@ -271,14 +301,17 @@ export default function HomePage() {
                                     marks
                                     min={1}
                                     max={9}
-                                />
+                                /> */}
+                                <div aria-labelledby="adult-slider">
+                                    {getTravellersButtons()}
+                                </div>
                             </span>
                             <span className="popover-span">
                                 <Typography id="adult-slider" gutterBottom>
                                     CHILDREN (2 - 12yr)
                                 {/* <span className="slider-val">{flight.children}</span> */}
                                 </Typography>
-                                <Slider
+                                {/* <Slider
                                     defaultValue={flight.children}
                                     value={flight.children}
                                     onChange={(e, value) => changeFlightDets('children', value)}
@@ -288,7 +321,10 @@ export default function HomePage() {
                                     marks
                                     min={0}
                                     max={6}
-                                />
+                                /> */}
+                                <div aria-labelledby="adult-slider">
+                                    {getChildrenButtons()}
+                                </div>
                             </span>
                             <span className="popover-span">
                                 <Typography id="adult-slider" gutterBottom>
@@ -304,7 +340,7 @@ export default function HomePage() {
                                         variant="contained"
                                         className={flight.class === 'pre-eco' ? "fare-btn class-btn active" : "fare-btn class-btn"}
                                         onClick={() => changeFlightDets('class', 'pre-eco')}
-                                    >Premium Economy</Button>
+                                    >Premium</Button>
                                     <Button
                                         variant="contained"
                                         className={flight.class === 'bus' ? "fare-btn class-btn active" : "fare-btn class-btn"}
@@ -477,7 +513,7 @@ export default function HomePage() {
                                     ADULTS (12y+)
                                 {/* <span className="slider-val">{flight.travellers}</span> */}
                                 </Typography>
-                                <Slider
+                                {/* <Slider
                                     defaultValue={flight.travellers}
                                     value={flight.travellers}
                                     onChange={(e, value) => changeFlightDets('travellers', value)}
@@ -487,14 +523,17 @@ export default function HomePage() {
                                     marks
                                     min={1}
                                     max={9}
-                                />
+                                /> */}
+                                <div aria-labelledby="adult-slider">
+                                    {getTravellersButtons()}
+                                </div>
                             </span>
                             <span className="popover-span">
                                 <Typography id="adult-slider" gutterBottom>
                                     CHILDREN (2 - 12yr)
                                 {/* <span className="slider-val">{flight.children}</span> */}
                                 </Typography>
-                                <Slider
+                                {/* <Slider
                                     defaultValue={flight.children}
                                     value={flight.children}
                                     onChange={(e, value) => changeFlightDets('children', value)}
@@ -504,7 +543,10 @@ export default function HomePage() {
                                     marks
                                     min={0}
                                     max={6}
-                                />
+                                /> */}
+                                <div aria-labelledby="adult-slider">
+                                    {getChildrenButtons()}
+                                </div>
                             </span>
                             <span className="popover-span">
                                 <Typography id="adult-slider" gutterBottom>
@@ -520,7 +562,7 @@ export default function HomePage() {
                                         variant="contained"
                                         className={flight.class === 'pre-eco' ? "fare-btn class-btn active" : "fare-btn class-btn"}
                                         onClick={() => changeFlightDets('class', 'pre-eco')}
-                                    >Premium Economy</Button>
+                                    >Premium</Button>
                                     <Button
                                         variant="contained"
                                         className={flight.class === 'bus' ? "fare-btn class-btn active" : "fare-btn class-btn"}
