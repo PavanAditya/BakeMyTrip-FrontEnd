@@ -79,6 +79,11 @@
     color: black !important;
 }
 
+.privacy {
+    color: #065af3;
+    text-decoration: underline;
+}
+
 /* ? Edit Register Form Styles */
 
 .edit-register-form {
