@@ -130,7 +130,7 @@ export default function Header({ stage, appState }) {
                             </Grid>
                         </div>
                         <br />
-                        <b><a href="https://packurbags.pavanaditya.com/privacynote" target="_" className="privacy"> Privacy Policy</a> for INDIA.</b>
+                        <b><a href="https://privacynote.packurbags.pavanaditya.com" target="_" className="privacy"> Privacy Policy</a> for INDIA.</b>
                         <br />
                         <br />
                         <div>
@@ -155,7 +155,7 @@ export default function Header({ stage, appState }) {
                             </Grid>
                         </div>
                         <br />
-                        <b><a href="https://packurbags.pavanaditya.com/privacynote" target="_" className="privacy"> Privacy Policy</a> for INDIA.</b>
+                        <b><a href="https://privacynote.packurbags.pavanaditya.com" target="_" className="privacy"> Privacy Policy</a> for INDIA.</b>
                         <br />
                         <br />
                         <div>

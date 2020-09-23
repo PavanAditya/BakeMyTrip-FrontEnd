@@ -90,7 +90,7 @@ export default function Auth() {
                     <img className="google-auth-icon" src={require("../../assets/icons/google-icon.png")} alt="google-auth-icon"></img>
                     Login with Google
                 </Button>
-                <p className="google-auth-title tc">By proceeding, you agree to <b>PackUrBags</b>'s <b><a href="https://packurbags.pavanaditya.com/privacynote" target="_" className="privacy">Privacy Policy</a></b>, User Agreement and T&Cs</p>
+                <p className="google-auth-title tc">By proceeding, you agree to <b>PackUrBags</b>'s <b><a href="https://privacynote.packurbags.pavanaditya.com" target="_" className="privacy">Privacy Policy</a></b>, User Agreement and T&Cs</p>
             </span>
         </div>
     )
