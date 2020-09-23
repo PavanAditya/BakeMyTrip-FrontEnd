@@ -130,7 +130,12 @@ export default function Header({ stage, appState }) {
                             </Grid>
                         </div>
                         <br />
-                        <div>We serve every Indian as of now and are on an immediate urge to expand our business also to the outside world soon.</div>
+                        <b><a href="https://packurbags.pavanaditya.com/privacynote" target="_" className="privacy"> Privacy Policy</a> for INDIA.</b>
+                        <br />
+                        <br />
+                        <div>
+                            We serve every Indian as of now and are on an immediate urge to expand our business also to the outside world soon.
+                        </div>
                         <p><span style={{ fontSize: 22, color: 'gray' }}><b>COUNTRIES IN PLAN</b></span></p>
                         <img className="all-country-flags" src={require('../../assets/images/all-country-flags.jpg')} alt='All country flags' />
                     </div>
@@ -150,8 +155,12 @@ export default function Header({ stage, appState }) {
                             </Grid>
                         </div>
                         <br />
-                        <a href="https://packurbags.pavanaditya.com/privacynote" target="_" className="privacy">Privacy Policy</a> for INDIA.
-                        <div>We serve every Indian as of now and are on an immediate urge to expand our business also to the outside world soon.</div>
+                        <b><a href="https://packurbags.pavanaditya.com/privacynote" target="_" className="privacy"> Privacy Policy</a> for INDIA.</b>
+                        <br />
+                        <br />
+                        <div>
+                            We serve every Indian as of now and are on an immediate urge to expand our business also to the outside world soon.
+                        </div>
                         <p><span style={{ fontSize: 22, color: 'gray' }}><b>COUNTRIES IN PLAN</b></span></p>
                         <img className="all-country-flags" src={require('../../assets/images/all-country-flags.jpg')} alt='All country flags' />
                     </div>
