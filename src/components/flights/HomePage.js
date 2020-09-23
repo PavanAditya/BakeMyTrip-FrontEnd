@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Grid, Icon, Radio, FormControlLabel, RadioGroup, TextField, Button, Snackbar, Slide, Popover, Typography, Slider, MenuItem, Menu } from '@material-ui/core';
+import { Grid, Icon, Radio, FormControlLabel, RadioGroup, TextField, Button, Snackbar, Slide, Popover, Typography, MenuItem, Menu } from '@material-ui/core';
 import Alert from '@material-ui/lab/Alert';
 import MomentUtils from '@date-io/moment';
 import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers';
