@@ -10,6 +10,11 @@
     margin-top: -5px;
 }
 
+.privacy {
+    color: #065af3;
+    text-decoration: underline;
+}
+
 .web-app-bar {
     display: flex !important;
 }
