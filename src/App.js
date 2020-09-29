@@ -11,6 +11,8 @@ function App() {
 
   const [appState, setAppState] = useState('loading');
   const [stage, setStage] = useState('unscrolled');
+  const [authorized, setAuthorized] = useState(false);
+  const [token, setToken] = useState(null);
 
   const handleScroll = () => {
     const position = window.pageYOffset;
@@ -19,6 +21,19 @@ function App() {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
+    const params = new URLSearchParams(window.location.search);
+    if (localStorage.getItem('token')) {
+      setToken(params.get('token'));
+      setAuthorized(true);
+    } else if (params.get('token')) {
+      setToken(params.get('token'));
+      localStorage.setItem('token', params.get('token'));
+      setAuthorized(true);
+      window.location.replace(window.location.origin);
+    } else {
+      setAuthorized(false);
+      setToken(null);
+    }
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -34,7 +49,7 @@ function App() {
         ? <Loader />
         :
         <div>
-          <Header stage={stage} appState={appState} />
+          <Header stage={stage} appState={appState} authorized={authorized} setAuthorized={setAuthorized} token={token} />
           <Route path="/" exact component={HomePage} />
           <Route path="/home" exact component={HomePage} />
           <Route path="/flights" exact component={FlightsPage} />

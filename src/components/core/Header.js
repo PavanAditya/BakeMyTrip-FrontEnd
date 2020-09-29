@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { AppBar, Icon, Typography, Toolbar, Button, Grid } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import ResponsiveDialog from '../shared/ResponsiveDialog';
@@ -6,25 +6,84 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Auth from './Auth';
 import { partners } from '../../assets/json/partners.json';
 import { coupons } from '../../assets/json/coupons.json';
+import { GetUserProfile } from '../../services/UserService';
 import '../../styles/Header.css'
 
-export default function Header({ stage, appState }) {
+export default function Header({ stage, appState, authorized, setAuthorized, token }) {
 
-    const [authorized, setAuthorized] = useState(false);
     const [open, setOpen] = useState(false);
     const [infoDialogOpen, setInfoDialogOpen] = useState(false);
-    const [infoDialogId, setInfoDialogId] = useState(0);
+    const [infoDialogId, setInfoDialogId] = useState(null);
     const [copy, setCopy] = useState(-1);
-
+    const [userProfile, setUserProfile] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        mobileNumber: '',
+    });
     const partnersList = partners;
     const couponCodes = coupons;
+
+    useEffect(() => {
+        const fetchProfileData = async () => {
+            let responseData = {};
+            console.log(authorized);
+            if (authorized) {
+                await GetUserProfile(localStorage.getItem('token'))
+                    .then(response => {
+                        responseData = response.dataObject.data[0];
+                        setUserProfile(userProfile => {
+                            setUserProfile({
+                                ...userProfile,
+                                firstName: responseData.firstName,
+                                lastName: responseData.lastName,
+                                email: responseData.email,
+                                mobileNumber: responseData.mobileNumber
+                            })
+                        });
+                    })
+                    .catch(error => console.log(error));
+            }
+        };
+        fetchProfileData();
+    }, [authorized, token]);
 
     const openAuthDialog = () => {
         setOpen(true);
     };
 
+    const logout = () => {
+        console.log('logout');
+        localStorage.clear();
+        setAuthorized(false);
+        setInfoDialogOpen(false);
+    };
+
     const InfoBody = () => {
         switch (infoDialogId) {
+            case 'profile':
+                return (
+                    <div>
+                        <h2>User Profile</h2>
+                        <br />
+                        <b>First Name</b>: {userProfile.firstName} <br />
+                        <b>Last Name</b>: {userProfile.lastName} <br />
+                        <b>Email</b>: {userProfile.email} <br />
+                        <b>Mobile Number</b>: {userProfile.mobileNumber ? userProfile.mobileNumber : 'Not Available'}
+                        <div align="right">
+                            <Button
+                                variant="contained"
+                                className="auth-button"
+                                startIcon={<img className="auth-btn-logo" src={require('../../assets/logos/pack-ur-bags-logo-bw.png')} alt='packurbags-icon' />}
+                                onClick={() => logout()}
+                            >
+                                <div>
+                                    <b style={{ fontSize: 14 }}>Logout</b>
+                                </div>
+                            </Button>
+                        </div>
+                    </div>
+                );
             case 1:
                 return (
                     <div>
@@ -258,7 +317,17 @@ export default function Header({ stage, appState }) {
                                 authorized === 'load'
                                     ? <div></div>
                                     : authorized === true
-                                        ? <div className="authorized"></div>
+                                        ? <div className="authorized">
+                                            <Button
+                                                variant="contained"
+                                                className="auth-button"
+                                                startIcon={<img className="auth-btn-logo" src={require('../../assets/logos/pack-ur-bags-logo-bw.png')} alt='info-icon-5' />}
+                                                endIcon={<Icon className="material-icon">expand_more</Icon>}
+                                                onClick={() => openInfoDialog('profile')}
+                                            >
+                                                Hi {userProfile.firstName}
+                                            </Button>
+                                        </div>
                                         : <div className="unauthorized">
                                             <Button
                                                 variant="contained"
@@ -268,7 +337,7 @@ export default function Header({ stage, appState }) {
                                                 onClick={() => openAuthDialog()}
                                             >
                                                 Login or Create Account
-                                    </Button>
+                                        </Button>
                                         </div>
                             }
                             <Button
